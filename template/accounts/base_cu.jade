@@ -1,0 +1,57 @@
+extends ../base
+block content
+  div.row
+   div.col
+    h1.border-bottom.mb-4=title
+   div.row(style="margin:auto")
+    div.col
+     a(href="/accounts") Topに戻る
+  div.row
+   div.col-md-8(style="background-color:#f1f1f1")
+    div.container(style="padding:30px;text")
+     form(method='POST')
+     
+      div.row
+       div.col-md-6
+        div.form-group
+         label.control-label 姓
+         input.form-control(name="first_name" placeholder='例：山田')
+       div.col-md-6
+        div.form-group
+         label.control-label 名
+         input.form-control(name="last_name" placeholder='例：太郎')
+      div.row
+       div.col-md-6
+        div.form-group
+         label.control-label 姓(ひらがな)
+         input.form-control(name="kana_first_name" placeholder='例：やまだ')
+       div.col-md-6
+        div.form-group
+         label.control-label 名（ひらがな）
+         input.form-control(name="kana_last_name" placeholder='例：たろう')
+      div.row
+       div.col-md-4
+        div.form-group
+         label.control-label 性別
+         div.form-control
+          div.radiokbox(style="font-size:16px;")
+           label(style="margin-right:20%") 
+            input(type="radio" name="gender" value='1' checked='checked' ) 
+            | 男性 
+           label
+            input(type="radio" name="gender" value='0' ) 
+            | 女性
+       div.col-md-8
+        div.form-group
+         label.control-label 生年月日
+         input.form-control(type="date" name='birth' style="font-size:20px;text-align:center")
+      div.row
+       div.col
+        div.form-group
+         label.control-label(for="Email") Email Address
+         input.form-control(id="email" name='email' placeholder="your address" type="email")
+      block buttons
+      div.row
+       div.col
+        div.form-group
+        input.btn.btn-block.btn-primary(type="submit", name="submit")
