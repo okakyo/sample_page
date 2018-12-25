@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/okakyo/sample_page/issues"
   },
-  "homepage": "https://github.com/okakyo/sample_page#readme"
+  "homepage": "https://github.com/okakyo/sample_page#readme",
+  "dependencies": {
+    "passport": "^0.4.0"
+  }
 }

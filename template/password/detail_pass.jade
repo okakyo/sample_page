@@ -1,0 +1,6 @@
+extends ../base
+block contents
+    div.row
+        - each name in names;
+        ul
+            li:a(href="")=name;
